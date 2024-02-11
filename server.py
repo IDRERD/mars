@@ -39,5 +39,11 @@ def mars_img():
         return f.read()
 
 
+@app.route("/promotion_image")
+def promotion_image():
+    with open("templates/promotion_image.html", encoding="utf8") as f:
+        return f.read()
+
+
 if __name__ == "__main__":
     app.run(port=8000, host="127.0.0.1")
