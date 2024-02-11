@@ -1,0 +1,9 @@
+{%extends "base.html"%}
+{%block content%}
+<h2 style="text-align: center;">Список профессий</h2>
+<{{type}}>
+{%for item in jobs%}
+<li>{{item}}</li>
+{%endfor%}
+</{{type}}>
+{%endblock%}
