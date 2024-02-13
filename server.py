@@ -45,5 +45,15 @@ def promotion_image():
         return f.read()
 
 
+@app.route("/astronaut_selection", methods=["POST", "GET"])
+def astronaut_selection():
+    if request.method == "GET":
+        with open("templates/astronaut_selection.html", encoding="utf8") as f:
+            return f.read()
+    elif request.method == "POST":
+        f = request.files
+        return "Ваша заявка успешно оставлена"
+
+
 if __name__ == "__main__":
     app.run(port=8000, host="127.0.0.1")
