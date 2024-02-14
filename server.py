@@ -55,5 +55,17 @@ def astronaut_selection():
         return "Ваша заявка успешно оставлена"
 
 
+@app.route("/load_photo", methods=["POST", "GET"])
+def load_photo():
+    if request.method == "GET":
+        with open("static/images/loaded_photo", "w") as f:
+            f.write("")
+        with open("templates/load_photo.html", encoding="utf8") as f:
+            return f.read()
+    elif request.method == "POST":
+        request.files["file"].save("static/images/loaded_photo")
+        return open("templates/load_photo.html", encoding="utf8").read()
+
+
 if __name__ == "__main__":
     app.run(port=8000, host="127.0.0.1")
