@@ -67,5 +67,11 @@ def load_photo():
         return open("templates/load_photo.html", encoding="utf8").read()
 
 
+@app.route("/carousel")
+def carousel():
+    with open("templates/carousel.html", encoding="utf8") as f:
+        return f.read()
+
+
 if __name__ == "__main__":
     app.run(port=8000, host="127.0.0.1")

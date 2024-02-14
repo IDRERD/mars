@@ -4,11 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6b92e892-e233-4c8f-bec4-56bb6d63a95d" name="Changes" comment="Mars prepare for mission design changes">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="6b92e892-e233-4c8f-bec4-56bb6d63a95d" name="Changes" comment="Mars load photo">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server.py" beforeDir="false" afterPath="$PROJECT_DIR$/server.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/astronaut_selection.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/astronaut_selection.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -194,7 +192,14 @@
       <option name="project" value="LOCAL" />
       <updated>1707653962286</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Mars load photo">
+      <created>1707922652030</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1707922652030</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -214,6 +219,7 @@
     <MESSAGE value="Mars One: jobs for crew" />
     <MESSAGE value="Mars image" />
     <MESSAGE value="Mars promotion image" />
-    <option name="LAST_COMMIT_MESSAGE" value="Mars promotion image" />
+    <MESSAGE value="Mars load photo" />
+    <option name="LAST_COMMIT_MESSAGE" value="Mars load photo" />
   </component>
 </project>
