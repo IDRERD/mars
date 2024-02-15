@@ -1,0 +1,8 @@
+{%extends "base.html"%}
+{%block content%}
+<h1 style="text-align: center;">Размещение по каютам</h1>
+{%set bs = "Каюта №"%}
+{%for astronaut in astronauts%}
+<p>{{astronaut}} - {{bs}} {{loop.index}}{%if loop.first%} - капитан корабля{%endif%}</p>
+{%endfor%}
+{%endblock%}
