@@ -7,6 +7,8 @@ from wtforms.validators import DataRequired
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'yandexlyceum_secret_key'
 
+answer_params = {"title": "Анкета", "surname": "Watny", "name": "Mark", "education": "выше среднего", "profession": "штурман марсохода", "sex": "male", "motivation": "Всегда мечтал застрять на Марсе!", "ready": "True"}
+
 
 @app.route("/<title>")
 @app.route("/index/<title>")
@@ -81,6 +83,13 @@ def choice(planet_name):
 @app.route("/results/<nickname>/<int:level>/<float:rating>")
 def results(nickname, level, rating):
     return render_template("results.html", nickname=nickname, level=level, rating=rating)
+
+
+@app.route("/answer")
+@app.route("/auto_answer")
+def answer():
+    return render_template("auto_answer.html", **answer_params)
+
 
 if __name__ == "__main__":
     app.run(port=8000, host="127.0.0.1")
