@@ -97,5 +97,21 @@ def distribution():
     return render_template("distribution.html", title="Размещение по каютам", astronauts=astronauts)
 
 
+class LoginForm(FlaskForm):
+    astronaut_id = StringField("id астронавта", validators=[DataRequired()])
+    astronaut_password = PasswordField("Пароль астронавта", validators=[DataRequired()])
+    captain_id = StringField("id капитана", validators=[DataRequired()])
+    captain_password = PasswordField("Пароль капитана", validators=[DataRequired()])
+    submit = SubmitField("Доступ")
+
+
+@app.route("/login", methods=["POST", "GET"])
+def login():
+    form = LoginForm()
+    if form.validate_on_submit():
+        return redirect("/success")
+    return render_template("login.html", title="Аварийный доступ", form=form)
+
+
 if __name__ == "__main__":
     app.run(port=8000, host="127.0.0.1")

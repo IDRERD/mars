@@ -1,0 +1,6 @@
+.marsLogo{
+	background-image: url("/static/images/MARS_ICON.png");
+	width: 150px;
+	height: 50px;
+	display: inline-block;
+}
