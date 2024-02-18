@@ -4,9 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6b92e892-e233-4c8f-bec4-56bb6d63a95d" name="Changes" comment="Mars astronaut login">
+    <list default="true" id="6b92e892-e233-4c8f-bec4-56bb6d63a95d" name="Changes" comment="Mars table">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server.py" beforeDir="false" afterPath="$PROJECT_DIR$/server.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/images/loaded_photo" beforeDir="false" afterPath="$PROJECT_DIR$/static/images/loaded_photo" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/carousel.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/carousel.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -143,7 +146,14 @@
       <option name="project" value="LOCAL" />
       <updated>1708102771830</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Mars table">
+      <created>1708252999571</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1708252999571</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -168,6 +178,7 @@
     <MESSAGE value="Mars auto answer" />
     <MESSAGE value="Mars astronaut distribution" />
     <MESSAGE value="Mars astronaut login" />
-    <option name="LAST_COMMIT_MESSAGE" value="Mars astronaut login" />
+    <MESSAGE value="Mars table" />
+    <option name="LAST_COMMIT_MESSAGE" value="Mars table" />
   </component>
 </project>

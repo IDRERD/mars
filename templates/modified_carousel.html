@@ -1,0 +1,18 @@
+{%extends "carousel.html"%}
+{%block content%}
+<form class="load-photo-form" method="post" enctype="multipart/form-data">
+  <div class="form-group">
+    <label for="photo">Добавить картинку</label>
+    <input type="file" name="file" class="form-control-file" id="photo">
+  </div>
+  <button type="submit" class="btn btn-primary">Отправить</button>
+</form>
+{%endblock%}
+{%block images%}
+{%for ig in imgs%}
+{%set src = "../static/images/loaded/" + ig%}
+<div class="carousel-item">
+  <img src={{src}} class="d-block w-100" alt="slide">
+</div>
+{%endfor%}
+{%endblock%}

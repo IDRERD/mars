@@ -3,12 +3,15 @@ import json
 from flask_wtf import FlaskForm
 from wtforms import StringField, PasswordField, BooleanField, SubmitField
 from wtforms.validators import DataRequired
+import os
+import glob
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'yandexlyceum_secret_key'
 
 answer_params = {"title": "Анкета", "surname": "Watny", "name": "Mark", "education": "выше среднего", "profession": "штурман марсохода", "sex": "male", "motivation": "Всегда мечтал застрять на Марсе!", "ready": "True"}
 astronauts = ["Ридли Скотт", "Энди Уир", "Марк Уотни", "Венката Капур", "Тедди Сандерс", "Шон Бин"]
+igs = []
 
 
 @app.route("/<title>")
@@ -117,6 +120,34 @@ def login():
 @app.route("/table_param/<sex>/<int:age>")
 def table(sex, age):
     return render_template("table.html", title="Оформление каюты", sex=sex, age=age)
+
+
+def gen_imgs(igs):
+    imgs = ""
+    base = '''<div class="carousel-item">
+                <img class="d-block w-100" src="../static/images/*" alt="slide">
+              </div>\n'''
+    for ig in igs:
+        imgs = imgs + base[:].replace("*", ig)
+    return imgs
+
+
+@app.route("/modified_carousel", methods=["POST", "GET"])
+def modified_carousel():
+    global igs
+    if request.method == "GET":
+        fls = glob.glob("static/images/loaded/*")
+        for f in fls:
+            os.remove(f)
+        igs = []
+        imgs = gen_imgs(igs)
+        return render_template("modified_carousel.html", imgs=igs)
+    elif request.method == "POST":
+        if request.files["file"].filename != "":
+            f = open("static/images/loaded/" + request.files["file"].filename, "w")
+            request.files["file"].save("static/images/loaded/" + request.files["file"].filename)
+            igs.append(request.files["file"].filename)
+        return render_template("modified_carousel.html", imgs=igs)
 
 
 if __name__ == "__main__":
