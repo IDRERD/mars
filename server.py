@@ -113,5 +113,11 @@ def login():
     return render_template("login.html", title="Аварийный доступ", form=form)
 
 
+@app.route("/table/<sex>/<int:age>")
+@app.route("/table_param/<sex>/<int:age>")
+def table(sex, age):
+    return render_template("table.html", title="Оформление каюты", sex=sex, age=age)
+
+
 if __name__ == "__main__":
     app.run(port=8000, host="127.0.0.1")

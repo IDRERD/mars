@@ -1,0 +1,28 @@
+{%extends "base.html"%}
+{%block content%}
+<link rel="stylesheet" type="text/css" href="../static/css/table.css">
+<h1 style="text-align: center;">Оформление каюты</h1>
+<table style="width: 80%; align-self: center;">
+	<tr style="background-color: gray;">
+		<th>Цвет стен</th>
+		<th>Эмблема</th>
+	</tr>
+	<tr>
+		{%if age < 21%}
+		{%if sex == "female"%}
+		<td style="width: 50%; height: 100%; background-color: lightsalmon;"></td>
+		{%else%}
+		<td style="width: 50%; height: 100%; background-color: lightcyan;"></td>
+		{%endif%}
+		<td style="height: 590px; background-image: url('/static/images/young_alien.png'); background-size: fill;"></td>
+		{%else%}
+		{%if sex == "female"%}
+		<td style="width: 50%; height: 100%; background-color: red;"></td>
+		{%else%}
+		<td style="width: 50%; height: 100%; background-color: blue;"></td>
+		{%endif%}
+		<td style="height: 590px; background-image: url('/static/images/old_alien.png'); background-size: fill;"></td>
+		{%endif%}
+	</tr>
+</table>
+{%endblock%}

@@ -1,0 +1,10 @@
+.emblem{
+	background-image: url("/static/images/young_alien.png");
+	width: 50px;
+	height: 100px;
+}
+.wallPaint{
+	background-color: red;
+	width: 50%;
+	height: 100%;
+}
